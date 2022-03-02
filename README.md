@@ -4,7 +4,6 @@
 
 
 # 1. Description
-# ======================
 * BANSIM is a discrete-event network simulator for wireless body area networks (WBANs) in standard Python 
   that supports deep reinforcement learning (DRL). BANSIM provides an intuitive and simple DRL development 
   environment with basic packet communication and BAN-specific components, such as human mobility model 
@@ -17,7 +16,6 @@
 # ======================
 
 ## 2. Environment
-# ======================
 * Users can run BANSIM in Standard Python environment. Specifically, BANSIM is implemented in the following 
   environment.
 * OS: Window 10
@@ -29,7 +27,6 @@
 # ======================
 
 ## 3. Prerequisite
-# ======================
 * To compile BANSIM, the following packages must be installed in the Python development environment.
 * simpy
 * numpy
@@ -40,7 +37,6 @@
 # ======================
 
 ## 4. Files
-# ======================
 * BANSIM includes the following class files.
 
 # dqn_trainer.py
@@ -84,7 +80,6 @@
 # ======================
 
 ## 5. Usage
-# ======================
 * To run BANSIM, users must initialize node/channel models.
 * An example code for configuring a WBAN is given in wban_test.py
 
