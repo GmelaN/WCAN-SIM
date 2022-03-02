@@ -12,7 +12,7 @@ import os
 NUM_CHANNELS = 1
 NUM_ACTIONS = 15
 
-
+ 
 class DQNTrainer:
     def __init__(self):
         self.env = None
