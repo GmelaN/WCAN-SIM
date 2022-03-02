@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from enum import Enum
 
-
+ 
 class BanFrmType(Enum):
     IEEE_802_15_6_MAC_MANAGEMENT = 0
     IEEE_802_15_6_MAC_CONTROL = 1
