@@ -8,7 +8,7 @@ import tensorflow as tf
 from tqdm import tqdm
 import pickle
 import os
-
+ 
 NUM_CHANNELS = 1
 NUM_ACTIONS = 15
 
