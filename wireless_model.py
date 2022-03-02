@@ -2,7 +2,7 @@ from tools import *
 from mobility_model import *
 import random
 
-
+ 
 class PropLossModel:
     def __init__(self):
         self.m_frequency = None
