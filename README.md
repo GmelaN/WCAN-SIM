@@ -12,7 +12,8 @@
   In addition, users can extend BANSIM to other networks by defining a new upper-layer or modifying 
   MAC/PHY components.
 * BANSIM is implemented based on SimPy component model. SimPy is a process-based discrete-event simulation 
-  framework for Python. The detailed information on SimPy can be found at https://simpy.readthedocs.io/en/latest/. 
+  framework for Python. The detailed information on SimPy can be found at https://simpy.readthedocs.io/en/latest/.
+* If you want to use BANSIM in your research work, please cite our paper https://doi.org/10.1016/j.sysarc.2022.102489
 # ======================
 
 ## 2. Environment
