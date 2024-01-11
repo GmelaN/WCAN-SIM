@@ -2,7 +2,7 @@ import simpy
 from wban_protocol_stack import *
 from dqn_trainer import *
 
-
+ 
 class Agent:
     def __init__(self, env):
         self.env = env

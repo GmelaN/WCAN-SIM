@@ -1,6 +1,6 @@
 import math
 
-
+ 
 class Trace:
     def __init__(self):
         self.env = None

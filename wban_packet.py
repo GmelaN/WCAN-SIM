@@ -1,7 +1,7 @@
 from wban_header import *
 from wireless_model import *
 
-
+ 
 @dataclass
 class SpectrumSignalParameters:
     duration: float = None

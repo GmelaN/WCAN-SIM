@@ -7,7 +7,7 @@ from trace import *
 import math
 import numpy as np
 from dqn_trainer import NUM_CHANNELS
-
+ 
 
 class BanMacState(Enum):
     MAC_IDLE = 0
