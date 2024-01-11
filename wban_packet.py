@@ -1,16 +1,9 @@
-from wban_header import *
-from wireless_model import *
-
- 
-@dataclass
-class SpectrumSignalParameters:
-    duration: float = None
-    tx_phy = None
-    tx_power: float = None  # dBm
-    tx_antenna: AntennaModel = None
+from ban_seoung_sim.base.packet import Packet, SpectrumSignalParameters
+from ban_seoung_sim.wban.wban_header import *
+from ban_seoung_sim.wireless_model import *
 
 
-class Packet:
+class WBanPacket(Packet):
     def __init__(self, pkt_size):
         self.size = pkt_size
         self.success = False
@@ -63,7 +56,7 @@ class Packet:
         return self.size
 
     def copy(self):
-        new_packet = Packet(self.size)
+        new_packet = WBanPacket(self.size)
         new_packet.success = self.success
         new_packet.spec_tx_params = self.spec_tx_params
         new_packet.mac_header = self.mac_header

@@ -1,3 +1,4 @@
+from turtle import position
 from keras.layers import Input, Dense, Dropout, Conv2D, Flatten, concatenate, LSTM
 from keras.models import Sequential, Model
 from collections import deque
@@ -5,14 +6,14 @@ import random
 import numpy as np
 import keras
 import tensorflow as tf
-from tqdm import tqdm
+from tqdm.auto import tqdm
 import pickle
 import os
  
 NUM_CHANNELS = 1
 NUM_ACTIONS = 15
 
- 
+
 class DQNTrainer:
     def __init__(self):
         self.env = None
@@ -20,7 +21,7 @@ class DQNTrainer:
         self.data_list = list()
 
         # DQN parameters
-        self.episodes = 4000
+        self.episodes = 500
         self.epsilon = 1.0
         self.min_epsilon = 0.1
         self.exploration_ratio = 0.5
@@ -122,7 +123,7 @@ class DQNTrainer:
         self.replay_memory.append((current_state, action, reward, next_state, done))
 
     def get_q_values(self, x):
-        return self.model.predict(x)
+        return self.model.predict(x, verbose=0)
 
     def train(self):
         # guarantee the minimum number of samples
@@ -132,9 +133,9 @@ class DQNTrainer:
         # get current q values and next q values
         samples = random.sample(self.replay_memory, self.batch_size)
         current_input = np.stack([sample[0] for sample in samples])
-        current_q_values = self.model.predict(current_input)    # return current Q-values (behavior (off-policy))
+        current_q_values = self.model.predict(current_input, verbose=0)    # return current Q-values (behavior (off-policy))
         next_input = np.stack([sample[3] for sample in samples])
-        next_q_values = self.target_model.predict(next_input)   # return target Q-values (target (off-policy))
+        next_q_values = self.target_model.predict(next_input, verbose=0)   # return target Q-values (target (off-policy))
 
         # update q values
         for i, (current_state, action, reward, _, done) in enumerate(samples):

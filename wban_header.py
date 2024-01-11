@@ -42,10 +42,10 @@ class FrameControl:
 
 @dataclass
 class AssignedLinkElement:
-    allocation_id: int = None
-    interval_start: int = None
-    interval_end: int = None
-    tx_power: float = None
+    allocation_id: int | None = None
+    interval_start: int | None = None
+    interval_end: int | None = None
+    tx_power: float | None = None
 
 
 class BanMacHeader:
