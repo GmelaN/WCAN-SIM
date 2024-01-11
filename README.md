@@ -78,6 +78,7 @@
 
 # 4.8 wban_test.py
 - In this file, an example code for configuring a WBAN is presented.
+
 # ======================
 
 ## 5. Usage
@@ -144,4 +145,3 @@
 
 # 5.14 Run simulation
 * env.run(until=run_time)
-# ======================
